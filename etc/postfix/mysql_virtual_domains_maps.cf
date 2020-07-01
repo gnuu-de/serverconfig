@@ -1,0 +1,6 @@
+user = user
+password = pass
+hosts = unix:/var/run/mysql/mysql.sock
+dbname = gnuu
+query = SELECT src FROM transport WHERE src like '%s' and status = '0'
+

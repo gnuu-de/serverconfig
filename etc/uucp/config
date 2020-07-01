@@ -1,0 +1,6 @@
+nodename uucp.gnuu.de
+spool /data/spool/uucp
+logfile /data/spool/uucp/Log
+statfile /data/spool/uucp/Stats
+debugfile /data/spool/uucp/Debug
+

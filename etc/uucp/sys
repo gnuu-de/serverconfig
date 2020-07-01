@@ -1,0 +1,5 @@
+# gnuu sys uucp conf
+call-login *
+call-password *
+time any
+port tcp
