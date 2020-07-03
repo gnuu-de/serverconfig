@@ -22,34 +22,35 @@ smtp-amavis          unix      -      -      n      -      10      lmtp
 #  -o smtpd_etrn_restrictions=reject
 #  -o smtpd_enforce_tls=yes -o smtpd_sasl_auth_enable=yes
 #628      inet  n       -       n       -       -       qmqpd
-pickup    fifo  n       -       n       60      1       pickup
-cleanup   unix  n       -       n       -       0       cleanup
-   -o header_checks=regexp:/etc/postfix/header_checks
-cleanup2   unix  n       -       n       -       0       cleanup
-qmgr      fifo  n       -       n       300     1       qmgr
-#qmgr     fifo  n       -       n       300     1       oqmgr
-#tlsmgr    unix  -       -       n       1000?   1       tlsmgr
-rewrite   unix  -       -       n       -       -       trivial-rewrite
-bounce    unix  -       -       n       -       0       bounce
-defer     unix  -       -       n       -       0       bounce
-trace     unix  -       -       n       -       0       bounce
-verify    unix  -       -       n       -       1       verify
-flush     unix  n       -       n       1000?   0       flush
+#
+pickup    unix  n       -       y       60      1       pickup
+cleanup   unix  n       -       y       -       0       cleanup
+qmgr      unix  n       -       n       300     1       qmgr
+#qmgr     unix  n       -       n       300     1       oqmgr
+tlsmgr    unix  -       -       y       1000?   1       tlsmgr
+rewrite   unix  -       -       y       -       -       trivial-rewrite
+bounce    unix  -       -       y       -       0       bounce
+defer     unix  -       -       y       -       0       bounce
+trace     unix  -       -       y       -       0       bounce
+verify    unix  -       -       y       -       1       verify
+flush     unix  n       -       y       1000?   0       flush
 proxymap  unix  -       -       n       -       -       proxymap
-smtp      unix  -       -       n       -       -       smtp
-# When relaying mail as backup MX, disable fallback_relay to avoid MX loops
-relay     unix  -       -       n       -       -       smtp
-	-o fallback_relay=
+proxywrite unix -       -       n       -       1       proxymap
+smtp      unix  -       -       y       -       -       smtp
+relay     unix  -       -       y       -       -       smtp
+        -o syslog_name=postfix/$service_name
 #       -o smtp_helo_timeout=5 -o smtp_connect_timeout=5
-showq     unix  n       -       n       -       -       showq
-error     unix  -       -       n       -       -       error
-discard   unix  -       -       n       -       -       discard
+showq     unix  n       -       y       -       -       showq
+error     unix  -       -       y       -       -       error
+retry     unix  -       -       y       -       -       error
+discard   unix  -       -       y       -       -       discard
 local     unix  -       n       n       -       -       local
 virtual   unix  -       n       n       -       -       virtual
-lmtp      unix  -       -       n       -       -       lmtp
-anvil     unix  -       -       n       -       1       anvil
-#localhost:10025 inet	n	-	n	-	-	smtpd -o content_filter=
-scache	  unix	-	-	n	-	1	scache
+lmtp      unix  -       -       y       -       -       lmtp
+anvil     unix  -       -       y       -       1       anvil
+scache    unix  -       -       y       -       1       scache
+postlog   unix-dgram n  -       n       -       1       postlogd
+
 #
 # ====================================================================
 # Interfaces to non-Postfix software. Be sure to examine the manual
@@ -73,11 +74,9 @@ ifmail    unix  -       n       n       -       -       pipe
   flags=F user=ftn argv=/usr/lib/ifmail/ifmail -r $nexthop ($recipient)
 bsmtp     unix  -       n       n       -       -       pipe
   flags=Fq. user=uucp argv=/usr/sbin/bsmtp -f $sender $nexthop $recipient
-procmail  unix  -       n       n       -       -       pipe
-  flags=R user=nobody argv=/usr/bin/procmail -t -m /etc/procmailrc ${sender} ${recipient}
-spfpolicy  unix  -       n       n       -       -       spawn
-  user=nobody argv=/usr/bin/perl /etc/postfix/spf-policy.pl
-greypolicy unix -    n    n    -    -    spawn
-   user=nobody argv=/usr/bin/perl /etc/postfix/greylist.pl
-
-tlsmgr    unix  -       -       n       1000?   1       tlsmgr
+#procmail  unix  -       n       n       -       -       pipe
+#  flags=R user=nobody argv=/usr/bin/procmail -t -m /etc/procmailrc ${sender} ${recipient}
+#spfpolicy  unix  -       n       n       -       -       spawn
+#  user=nobody argv=/usr/bin/perl /etc/postfix/spf-policy.pl
+#greypolicy unix -    n    n    -    -    spawn
+#   user=nobody argv=/usr/bin/perl /etc/postfix/greylist.pl

@@ -7,19 +7,15 @@ data_directory = /var/lib/postfix
 mail_spool_directory = /data/spool/mail
 queue_directory = /data/spool/postfix
 command_directory = /usr/sbin
-daemon_directory = /usr/lib/postfix
-html_directory = /usr/share/doc/packages/postfix/html
-manpage_directory = /usr/share/man
-sample_directory = /usr/share/doc/packages/postfix/samples
-readme_directory = /usr/share/doc/packages/postfix/README_FILES
+#daemon_directory = /usr/lib/postfix
 #
 sendmail_path = /usr/sbin/sendmail
 newaliases_path = /usr/bin/newaliases
 mailq_path = /usr/bin/mailq
 #
 mail_owner = postfix
-setgid_group = maildrop
-default_privs = mailman
+#setgid_group = maildrop
+#default_privs = mailman
 #
 myhostname = uucp.gnuu.de
 mydomain = gnuu.de
@@ -32,17 +28,13 @@ unknown_local_recipient_reject_code = 550
 mynetworks = 217.79.184.96/32, 127.0.0.0/8, 89.163.209.182/32, 89.163.209.4/32, 85.214.128.138/32
 recipient_delimiter = +
 #
-header_checks = regexp:/etc/postfix/header_checks
-debug_peer_level = 2
-debugger_command =
-	 PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
-	 xxgdb $daemon_directory/$process_name $process_id & sleep 5
+header_checks = regexp:/work-dir/etc/postfix/header_checks
 #
 biff = no
-canonical_maps = hash:/etc/postfix/canonical
-virtual_maps = hash:/etc/postfix/virtual
-relocated_maps = hash:/etc/postfix/relocated
-sender_canonical_maps = hash:/etc/postfix/sender_canonical
+canonical_maps = hash:/work-dir/etc/postfix/canonical
+virtual_maps = hash:/work-dir/etc/postfix/virtual
+relocated_maps = hash:/work-dir/etc/postfix/relocated
+sender_canonical_maps = hash:/work-dir/etc/postfix/sender_canonical
 #
 masquerade_exceptions = root
 masquerade_classes = envelope_sender, header_sender, header_recipient
@@ -60,12 +52,12 @@ smtpd_client_restrictions =  check_client_access hash:/etc/postfix/access, rejec
 smtpd_helo_required = no
 smtpd_helo_restrictions = 
 strict_rfc821_envelopes = no
-smtpd_recipient_restrictions = permit_mynetworks,check_recipient_access hash:/etc/postfix/block_recipient,check_client_access hash:/etc/postfix/access, reject_unauth_destination, reject_unknown_recipient_domain,check_recipient_access regexp:/etc/postfix/header_checks, check_policy_service inet:127.0.0.1:2501
+smtpd_recipient_restrictions = permit_mynetworks,check_recipient_access hash:/work-dir/etc/postfix/block_recipient,check_client_access hash:/work-dir//etc/postfix/access, reject_unauth_destination, reject_unknown_recipient_domain,check_recipient_access regexp:/work-dir/etc/postfix/header_checks, check_policy_service inet:127.0.0.1:2501
 smtp_sasl_auth_enable = no
 smtpd_sasl_auth_enable = no
 smtpd_use_tls = no
 smtp_use_tls = no
-alias_maps = hash:/etc/aliases
+alias_maps = hash:/work-dir/etc/aliases
 mailbox_size_limit = 0
 message_size_limit = 10240000
 # 
@@ -76,8 +68,8 @@ smtpd_client_event_limit_exceptions = ${smtpd_client_connection_limit_exceptions
 smtpd_forbidden_commands = CONNECT GET POST
 
 # gnuu config
-relay_domains = mysql:/etc/postfix/relay-mysql.cfg
-transport_maps = mysql:/etc/postfix/transport-mysql.cfg
+relay_domains = mysql:/work-dir/etc/postfix/relay-mysql.cfg
+transport_maps = mysql:/work-dir/etc/postfix/transport-mysql.cfg
 # to use dkim-milter
 # as verifier
 # smtpd_milters = unix:/var/spool/postfix/milter/dkim
@@ -88,3 +80,4 @@ milter_default_action = accept
 # opensuse.dkim_genkey
 disable_vrfy_command = yes
 #
+maillog_file = /dev/stdout
