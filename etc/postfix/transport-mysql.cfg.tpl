@@ -1,6 +1,6 @@
-hosts = mysql_host
-user = mysql_user
-password = mysql_password
-dbname = mysql_db
+hosts = $mysql_host
+user = $mysql_user
+password = $mysql_password
+dbname = $mysql_db
 query  =  SELECT dst FROM transport WHERE src = '%s' AND status = '0'
 
