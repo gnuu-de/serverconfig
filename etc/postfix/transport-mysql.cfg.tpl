@@ -1,5 +1,5 @@
 hosts = $mysql_host
-port = $myyql_port
+port = $mysql_port
 user = $mysql_user
 password = $mysql_password
 dbname = $mysql_db
