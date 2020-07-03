@@ -45,8 +45,7 @@ disable_dns_lookups = no
 relayhost = 
 mailbox_command = 
 mailbox_transport = 
-# smtpd_sender_restrictions = hash:/etc/postfix/access
-smtpd_client_restrictions =  check_client_access hash:/work-dir/etc/postfix/access, reject_unknown_client, reject_rbl_client pbl.spamhaus.org, reject_rbl_client xbl.spamhaus.org, reject_rbl_client sbl.spamhaus.org, reject_rbl_client cbl.abuseat.org
+#smtpd_client_restrictions =  check_client_access hash:/work-dir/etc/postfix/access, reject_unknown_client, reject_rbl_client pbl.spamhaus.org, reject_rbl_client xbl.spamhaus.org, reject_rbl_client sbl.spamhaus.org, reject_rbl_client cbl.abuseat.org
 # reject_rbl_client rbl.gnuu.de
 
 smtpd_helo_required = no
