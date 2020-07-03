@@ -58,7 +58,8 @@ smtp_sasl_auth_enable = no
 smtpd_sasl_auth_enable = no
 smtpd_use_tls = no
 smtp_use_tls = no
-alias_maps = hash:/work-dir/etc/aliases
+alias_maps = hash:/work-dir/etc/postfix/aliases
+alias_database = hash:/work-dir/etc/postfix/aliases
 mailbox_size_limit = 0
 message_size_limit = 10240000
 # 
