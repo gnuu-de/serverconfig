@@ -50,14 +50,10 @@ news.karotte.org/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,dete
         @control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
         @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
         :Tm:INNFEED!
-# cnntp.org / Frank Kloeker / news@cnntp.org
-# feed.cnntp.org/news.hanflobby.de,news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de\
-# 	:at.*,bln.*,ch.*,de.*,ffm.*,ger.*,gnu.*,hamster.*,linux.*,\
-# 	mailing.*,opennews.*,stgt.*,x-privat.*,\
-# 	comp.*,humanities.*,misc.*,news.*,rec.*,sci.*,soc.*,talk.*,\
-#        @control.*,@local,@ka.*,\
-#         @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-#         :Tm:INNFEED!
+# uucp.gnuu.de / Frank Kloeker / eumel@admin.gnuu.de
+uucp.gnuu.de/\
+ 	:*\
+        :Tm:INNFEED!
 # Marcel Straub (marcel@straub-nv.de)
 newsfeed.fsmpi.rwth-aachen.de/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org\
 	:*,@*.bina*,@*.baina*,@*.warez*,@de.alt.dateien*,@alt.bin*,\
