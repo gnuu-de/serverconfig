@@ -9,15 +9,9 @@ CONTROLCHAN!\
 	:!*,control,control.*,!control.cancel\
 	:Tc,Wnsm:/usr/lib/news/bin/controlchan
 #
-FREENIX!:*,!junk,!control,!control.*,!to,!to.*\
-	:Tc,WH:/usr/lib/news/bin/pathgrep freenix.log
-#
 INNFEED!:\
 	!*,\
 	:Tc,Wnm*,S30000:/usr/lib/news/bin/innfeed
-#
-counter!:de.*\
-        :Tf,WbN:/data/news/stats/counter.log
 #
 #
 news.detebe.org/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,news.iks-jena.de,news.visyn.net,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de\
