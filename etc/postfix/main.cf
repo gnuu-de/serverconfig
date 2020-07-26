@@ -25,7 +25,7 @@ inet_protocols = all
 unknown_local_recipient_reject_code = 550
 #
 
-mynetworks = 217.79.184.96/32, 127.0.0.0/8, 89.163.209.182/32, 89.163.209.4/32, 85.214.128.138/32
+mynetworks = 217.79.184.96/32, 127.0.0.0/8, 10.42.0.0/16, 10.43.0.0/16, 85.214.128.138/32
 recipient_delimiter = +
 #
 header_checks = regexp:/work-dir/etc/postfix/header_checks
