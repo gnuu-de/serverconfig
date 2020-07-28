@@ -14,36 +14,24 @@ INNFEED!:\
 	:Tc,Wnm*,S30000:/usr/lib/news/bin/innfeed
 #
 #
-news.detebe.org/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,news.iks-jena.de,news.visyn.net,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de\
+news.detebe.org/news.owl.de,news.iks-jena.de,news.karotte.org\
 	:ffm.*,koblenz.*,@control.*,@chillnet.*,@local,@ka.*,\
 	@newsmon.*,@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# akk.uni-karlsruhe / Urs Janssen <urs@akk.org> / usenet@akk.org
-news.akk.uni-karlsruhe.de/news.owl.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de,newsfeed.datemas.de,news.marzen.de,news.albasani.net\
-	:de.*,ka.*,kassel.*,luebeck.*,thur.*,uk.*,@control.*,@local,\
-	@koblenz.*,@chillnet.*,@newsmon.*,@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm:INNFEED!
 # news.iks-jena.de /  Erik Heinz <erik@iks-jena.de>
-news.iks-jena.de/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.visyn.net,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de\
+news.iks-jena.de/news.owl.de,detebe.org,news.karotte.org\
 	:de.*,!de.alt.dateien.*,maus.*,thur.*,z-netz.*,\
 	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
 	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
 # news.owl.de /   Cord Beermann <news@owl.de>
-news.owl.de/news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de\
+news.owl.de/detebe.org,news.iks-jena.de,news.karotte.org\
 	:nrw.*,owl.*,westf.*,\
 	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
 	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# ViSyn.NET Consulting / Viktor Kafke / v.kafke@visyn.net
-news.visyn.net/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.karotte.org,newsfeed.fsmpi.rwth-aachen.de\
-	:de.*,!de.alt.dateien.*,hannover.*,fido.ger.*,news.*,\
-	schule.*,ger.*,braunschweig.*,stgt.*,comp.*,\
-	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
-	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm:INNFEED!
 # Karotte.org / Sebastian wiesinger / sebastian@karotte.org
-news.karotte.org/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,newsfeed.fsmpi.rwth-aachen.de\
+news.karotte.org/news.owl.de,detebe.org,news.iks-jena.de\
 	:abg.*,at.*,bln.*,braunschweig.*,comp.*,de.*,europa.*,ger.*,hamburg.*,\
 	hamster.*,hannover.*,humanities.*,kiel.*,linux.*,luebeck.*,misc.*,muenster.*,muc.*,\
 	news.*,nrw.*,opera.*,rec.*,saar.*,sci.*,soc.*,stgt.*,schule.*,talk.*,thur.*,\
@@ -54,35 +42,6 @@ news.karotte.org/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,dete
 uucp.gnuu.de/\
  	:*\
         :Tm:INNFEED!
-# Marcel Straub (marcel@straub-nv.de)
-newsfeed.fsmpi.rwth-aachen.de/news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org\
-	:*,@*.bina*,@*.baina*,@*.warez*,@de.alt.dateien*,@alt.bin*,\
-        @alt.dvdnordic.*,@alt.*pedophil.*,@*.bain*,@*.biana*,\
-	@*.biinaries*,@*bina*,@*.bineries*,@*.binia*,@*.binries*,\
-	@*.cd.image*,@*.files.images*,@*.mp3*,@*music.bin*,\
-	@*.pictures*,@*porno.images*,@unidata.*,@*.warez*,\
-	@es.binarios.*,\
-        @control.*,@local,@ka.*,@newsmon.*,\
-        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm,<150000:INNFEED!
-# Harald Ms <info@haraldmas.de> / Karlsruhe/DE
-newsfeed.datemas.de/news.datemas.de,news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org\
-	:*,@*.bina*,@*.bain*,@*.warez*,@*.dateien*,@unidata.*,\
-        @control.*,@local,@ka.*,@newsmon.*,\
-        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm,<150000:INNFEED!
-# Holger Marzen <holger@marzen.de>^
-news.marzen.de/newsfeed.datemas.de,news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org\
-	:de.*,saar.*,ger.*,@*.dateien*,@unidata.*,\
-        @control.*,@local,@ka.*,@newsmon.*,\
-        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm,<150000:INNFEED!
-# Roman Racine <roman.racine@gmail.com>
-news.albasani.net/albasani.net,newsfeed.datemas.de,news.owl.de,news.akk.uni-karlsruhe.de,akk.uni-karlsruhe.de,detebe.org,news.iks-jena.de,news.visyn.net,news.karotte.org\
-	:*,\
-        @control.*,@local,@ka.*,@newsmon.*,\
-        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm,<200000:INNFEED!
 ###############################################################################
 #
 #
