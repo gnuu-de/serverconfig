@@ -6,7 +6,7 @@
 # service type  private unpriv  chroot  wakeup  maxproc command + args
 #               (yes)   (yes)   (yes)   (never) (100)
 # ==========================================================================
-smtp      inet  n       -       n       -       -       smtpd -v
+smtp      inet  n       -       n       -       -       smtpd
 #submission inet n      -       n       -       -       smtpd
 #	-o smtpd_etrn_restrictions=reject
 #	-o smtpd_client_restrictions=permit_sasl_authenticated,reject
@@ -28,7 +28,7 @@ verify    unix  -       -       y       -       1       verify
 flush     unix  n       -       y       1000?   0       flush
 proxymap  unix  -       -       n       -       -       proxymap
 proxywrite unix -       -       n       -       1       proxymap
-smtp      unix  -       -       y       -       -       smtp -v
+smtp      unix  -       -       y       -       -       smtp
 relay     unix  -       -       y       -       -       smtp
         -o syslog_name=postfix/$service_name
 #       -o smtp_helo_timeout=5 -o smtp_connect_timeout=5
