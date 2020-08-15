@@ -1,5 +1,5 @@
 loglevel = 3
-inet = 2501
+inet = 0.0.0.0:2501
 pidfile = /var/run/sqlgrey.pid
 reconnect_delay = 5
 max_connect_age = 24
