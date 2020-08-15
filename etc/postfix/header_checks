@@ -362,6 +362,5 @@
 #                                                  HEADER_CHECKS(5)
 #####
 if /^Received:/
-/slrn.*\.eumel@eumel\.gnuu\.de/ DISCARD
-/slrn.*\.joerg@alea\.gnuu\.de/ DISCARD
+/(20[01].*\.g.[0-9]+|slrn.*joerg|.*git.*joerg)@alea\.gnuu\.de/  REJECT
 endif
