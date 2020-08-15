@@ -1,0 +1,12 @@
+loglevel = 3
+inet = 2501
+pidfile = /var/run/sqlgrey.pid
+reconnect_delay = 5
+max_connect_age = 24
+db_type = mysql
+db_name = sqlgrey
+db_host = $mysql_host
+db_port = $mysql_port
+db_user = $mysql_user
+db_pass = $mysql_password
+greymethod = smart
