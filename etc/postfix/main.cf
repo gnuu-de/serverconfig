@@ -45,13 +45,23 @@ disable_dns_lookups = no
 relayhost = 
 mailbox_command = 
 mailbox_transport = 
-smtpd_client_restrictions =  check_client_access hash:/work-dir/etc/postfix/access, reject_unknown_client, reject_rbl_client pbl.spamhaus.org, reject_rbl_client xbl.spamhaus.org, reject_rbl_client sbl.spamhaus.org, reject_rbl_client cbl.abuseat.org
-# reject_rbl_client rbl.gnuu.de
-
+smtpd_client_restrictions = 
+    check_client_access hash:/work-dir/etc/postfix/access,
+    reject_unknown_client,
+    reject_rbl_client pbl.spamhaus.org,
+    reject_rbl_client xbl.spamhaus.org,
+    reject_rbl_client sbl.spamhaus.org,
+    reject_rbl_client cbl.abuseat.org
 smtpd_helo_required = no
 smtpd_helo_restrictions = 
 strict_rfc821_envelopes = no
-smtpd_recipient_restrictions = permit_mynetworks,check_recipient_access hash:/work-dir/etc/postfix/block_recipient,check_client_access hash:/work-dir//etc/postfix/access, reject_unauth_destination, reject_unknown_recipient_domain,check_recipient_access regexp:/work-dir/etc/postfix/header_checks, check_policy_service inet:sqlgrey:2501
+smtpd_recipient_restrictions = 
+    permit_mynetworks,
+    check_recipient_access hash:/work-dir/etc/postfix/block_recipient,
+    check_client_access hash:/work-dir/etc/postfix/access,
+    reject_unauth_destination,
+    reject_unknown_recipient_domain,
+    check_policy_service inet:sqlgrey:2501
 smtp_sasl_auth_enable = no
 smtpd_sasl_auth_enable = no
 smtpd_use_tls = no
