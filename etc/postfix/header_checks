@@ -361,6 +361,4 @@
 # 
 #                                                  HEADER_CHECKS(5)
 #####
-if /^Received:/
-/(20[01].*\.g.[0-9]+|slrn.*joerg|.*git.*joerg)@alea\.gnuu\.de/  REJECT
-endif
+/(20[01].*\.g.[0-9]+|slrn.*joerg|.*git.*joerg)@alea\.gnuu\.de/  DISCARD
