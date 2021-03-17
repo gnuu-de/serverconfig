@@ -1,9 +1,6 @@
-##  newsfeeds default vor onlinenews.germany.net
 ME\
 	:!*,!junk,!control*,!local\
 	::
-#
-# OVERVIEW!:*:Tc,Ao,WhR,S30000:/usr/lib/news/bin/overchan
 #
 CONTROLCHAN!\
 	:!*,control,control.*,!control.cancel\
