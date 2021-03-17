@@ -35,6 +35,10 @@ news.karotte.org/news.owl.de,detebe.org,news.iks-jena.de\
         @control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
         @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
         :Tm:INNFEED!
+# eternal-september / Wolfgang M. Weyand / <wolfgang(at)eternal-september.org>
+eternal-september/eternal-september.org\
+       :*,@*.bina*,@*.bain*,@*.dateien*,@*.pictures*/!local\
+       :Ap,Tm:innfeed!
 # uucp.gnuu.de / Frank Kloeker / eumel@admin.gnuu.de
 uucp.gnuu.de/\
  	:*\
