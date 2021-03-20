@@ -11,38 +11,40 @@ INNFEED!:\
 	:Tc,Wnm*,S30000:/usr/lib/news/bin/innfeed
 #
 #
-news.detebe.org/news.owl.de,news.iks-jena.de,news.karotte.org\
+news.detebe.org/detebe.org\
 	:ffm.*,koblenz.*,@control.*,@chillnet.*,@local,@ka.*,\
 	@newsmon.*,@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# news.iks-jena.de /  Erik Heinz <erik@iks-jena.de>
-news.iks-jena.de/news.owl.de,detebe.org,news.karotte.org\
+# news.iks-jena.de /  Erik Heinz <erik(at)iks-jena.de>
+news.iks-jena.de/news.iks-jena.de\
 	:de.*,!de.alt.dateien.*,maus.*,thur.*,z-netz.*,\
-	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
+	@control.*,@local,@ka.*,@newsmon.*,\
 	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# news.owl.de /   Cord Beermann <news@owl.de>
-news.owl.de/detebe.org,news.iks-jena.de,news.karotte.org\
+# news.owl.de /   Cord Beermann <news(at)owl.de>
+news.owl.de/news.owl.de\
 	:nrw.*,owl.*,westf.*,\
 	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
 	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# Karotte.org / Sebastian wiesinger / sebastian@karotte.org
-news.karotte.org/news.owl.de,detebe.org,news.iks-jena.de\
+# Karotte.org / Sebastian wiesinger / sebastian(at)karotte.org
+news.karotte.org/news.karotte.org\
 	:abg.*,at.*,bln.*,braunschweig.*,comp.*,de.*,europa.*,ger.*,hamburg.*,\
 	hamster.*,hannover.*,humanities.*,kiel.*,linux.*,luebeck.*,misc.*,muenster.*,muc.*,\
 	news.*,nrw.*,opera.*,rec.*,saar.*,sci.*,soc.*,stgt.*,schule.*,talk.*,thur.*,\
-        @control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
+        @control.*,@local,@ka.*,@newsmon.*,\
         @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
         :Tm:INNFEED!
 # eternal-september / Wolfgang M. Weyand / <wolfgang(at)eternal-september.org>
 eternal-september/eternal-september.org\
-       :*,@*.bina*,@*.bain*,@*.dateien*,@*.pictures*/!local\
-       :Ap,Tm:innfeed!
-# uucp.gnuu.de / Frank Kloeker / eumel@admin.gnuu.de
-uucp.gnuu.de/\
- 	:*\
-        :Tm:INNFEED!
+       :*,@*.bina*,@*.bain*,@*.dateien*,@*.pictures*,\
+        @control.*,@local,@ka.*,@newsmon.*,\
+        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu/!local\
+       :Tm:INNFEED!
+# uucp.gnuu.de / Frank Kloeker / eumel(at)admin.gnuu.de
+# uucp.gnuu.de/\
+# 	:*\
+#        :Tm:INNFEED!
 ###############################################################################
 #
 #
