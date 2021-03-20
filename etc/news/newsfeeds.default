@@ -21,12 +21,6 @@ news.iks-jena.de/news.iks-jena.de\
 	@control.*,@local,@ka.*,@newsmon.*,\
 	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
 	:Tm:INNFEED!
-# news.owl.de /   Cord Beermann <news(at)owl.de>
-news.owl.de/news.owl.de\
-	:nrw.*,owl.*,westf.*,\
-	@control.*,@local,@ka.*,@chillnet.*,@newsmon.*,\
-	@arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu\
-	:Tm:INNFEED!
 # Karotte.org / Sebastian wiesinger / sebastian(at)karotte.org
 news.karotte.org/news.karotte.org\
 	:abg.*,at.*,bln.*,braunschweig.*,comp.*,de.*,europa.*,ger.*,hamburg.*,\
