@@ -33,7 +33,7 @@ news.karotte.org/news.karotte.org\
 eternal-september/eternal-september.org\
        :*,@*.bina*,@*.bain*,@*.dateien*,@*.pictures*,\
         @control.*,@local,@ka.*,@newsmon.*,\
-        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu/!local\
+        @arcor.*,@fm.*,@gnuu.*/!arcor,!gnuu,!local\
        :Tm:INNFEED!
 # uucp.gnuu.de / Frank Kloeker / eumel(at)admin.gnuu.de
 # uucp.gnuu.de/\
