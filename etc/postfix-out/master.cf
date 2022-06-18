@@ -23,3 +23,5 @@ lmtp      unix  -       -       y       -       -       lmtp
 anvil     unix  -       -       y       -       1       anvil
 scache    unix  -       -       y       -       1       scache
 postlog   unix-dgram n  -       n       -       1       postlogd
+bsmtp     unix  -       n       n       -       -       pipe
+  flags=Fq. user=uucp argv=/usr/sbin/bsmtp -f $sender $nexthop $recipient
