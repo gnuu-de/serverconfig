@@ -42,9 +42,9 @@ mailbox_size_limit = 0
 message_size_limit = 10240000
 # 
 # gnuu config
-relay_domains = mysql:/work-dir/etc/postfix/relay-mysql.cfg
-transport_maps = mysql:/work-dir/etc/postfix/transport-mysql.cfg
-local_recipient_maps = mysql:/work-dir/etc/postfix/transport-mysql.cfg
+relay_domains = mysql:/work-dir/etc/postfix-out/relay-mysql.cfg
+transport_maps = mysql:/work-dir/etc/postfix-out/transport-mysql.cfg
+local_recipient_maps = mysql:/work-dir/etc/postfix-out/transport-mysql.cfg
 disable_vrfy_command = yes
 #
 #maillog_file = /dev/stdout
